@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6592601c2e9246f5882212563e621955, type: 3}
   m_Name: MovementConfig
   m_EditorClassIdentifier: 
-  moveForces: {x: 2, y: 2}
+  moveForces: {x: 2000, y: 2000}
   maximumSpeed: 1.2
   minimumDistanceToWobbleCamera: 0.5

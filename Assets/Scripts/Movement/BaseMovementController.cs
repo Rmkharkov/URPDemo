@@ -10,25 +10,25 @@ namespace Movement
 
         public void StrafeRight(float factor)
         {
-            Body.AddForce(Vector3.right*UsedMovementConfig.MoveForces.x);
+            Body.AddForce(Vector3.right*UsedMovementConfig.MoveForces.x * Time.deltaTime);
             LimitSpeed();
         }
         
         public void StrafeLeft(float factor)
         {
-            Body.AddForce(Vector3.left*UsedMovementConfig.MoveForces.x);
+            Body.AddForce(Vector3.left*UsedMovementConfig.MoveForces.x * Time.deltaTime);
             LimitSpeed();
         }
 
         public void Forward(float factor)
         {
-            Body.AddForce(Vector3.forward*UsedMovementConfig.MoveForces.x);
+            Body.AddForce(Vector3.forward * UsedMovementConfig.MoveForces.y * Time.deltaTime);
             LimitSpeed();
         }
         
         public void Backward(float factor)
         {
-            Body.AddForce(Vector3.back*UsedMovementConfig.MoveForces.x);
+            Body.AddForce(Vector3.back*UsedMovementConfig.MoveForces.y * Time.deltaTime);
             LimitSpeed();
         }
 

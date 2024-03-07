@@ -22,8 +22,10 @@ namespace Movement
         [SerializeField] private Vector2 moveForces;
         [SerializeField] private float maximumSpeed;
         [SerializeField] private float minimumDistanceToWobbleCamera;
+        [SerializeField] private float minimumSpeedToSoundOnCollision;
         public Vector2 MoveForces => moveForces;
         public float MaximumSpeed => maximumSpeed;
         public float MinimumDistanceToWobbleCamera => minimumDistanceToWobbleCamera;
+        public float MinimumSpeedToSoundOnCollision => minimumSpeedToSoundOnCollision;
     }
 }

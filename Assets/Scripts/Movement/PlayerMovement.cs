@@ -5,8 +5,10 @@ using Zenject;
 
 namespace Movement
 {
-    public class PlayerMovement : BaseMovementView
+    public class PlayerMovement : BaseMovementView, IPlayerMovement
     {
+        public Vector3 Velocity => Model.Body.velocity;
+        
         private IPlayerInput _playerInput;
 
         [Inject]
@@ -23,6 +25,5 @@ namespace Movement
             _playerInput.Backward.Subscribe(Controller.Backward).AddTo(this);
             _playerInput.Stop.Subscribe(_ => Controller.Stop()).AddTo(this);
         }
-
     }
 }
